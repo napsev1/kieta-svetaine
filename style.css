@@ -38,6 +38,11 @@ body {
     display: flex;
     justify-content: center;
 }
+
+/* kas cia domai? https://prnt.sc/fRto0gjdcNZe */
+/* apie ka tu sneki??? */
+/* baisiai kreivas more butonas*/
+
 .card {
     display: flex;
     justify-content: center;
@@ -85,6 +90,7 @@ body {
     font-weight: bold;
 }
 /* imano padaryt koki delay kad animation playintu? */
+/* uzpiso sitas css ebanas varau kitus shit daryt*/
 #expandingdiv {
     display: flex;
     justify-content: center;
@@ -105,4 +111,34 @@ body {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px;
     border-radius: 5px;
     border: 0;
+}
+.addBtn {
+    transition: all 0.3s ease-in-out;
+    font-family: "Dosis", sans-serif;
+    border-radius: 10px;
+    background-color: rgb(80, 78, 106);
+    box-shadow: 0 10px 10px -6px rgba(255, 255, 255, 0.5);
+    border: none;
+    font-size: 20px;
+    color: white;
+}
+.addBtn:active {
+    opacity: 0.5;
+}
+.addBtn:hover {
+    transform: translateY(3px);
+    box-shadow: none;
+
+
+   }
+#myInput {
+ color: #fff;
+ font-size: 0.9rem;
+ background-color: transparent;
+ width: 10%;
+ box-sizing: border-box;
+ padding-inline: 15px;
+ padding-block: 12px;
+ border: none;
+ border-bottom: solid;
 }
