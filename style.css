@@ -99,4 +99,9 @@ body {
 .closebtn {
     float: right;
     transform: translate(12px, -62px);
+    background: solid var(--background-light);
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px;
+    border-radius: 5px;
+    border: 0;
 }
