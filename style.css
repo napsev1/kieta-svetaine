@@ -2,7 +2,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #0B1416;
 }
-.testt{
+.navbar{
     display: flex;
     align-items: center;
     justify-content: center;
