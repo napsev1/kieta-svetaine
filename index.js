@@ -22,7 +22,10 @@ function newElement() {
      // paclearinam kai pamygam mygtuka
      myInput.value = "";
    }
- 
+   //funkcija kuri paselektina "myUL" (kuris yra tarp list kaip div) ir padeletina viska
+function resetElement() {
+      document.getElementById("myUL").innerHTML = "";
+}
 
 
  
