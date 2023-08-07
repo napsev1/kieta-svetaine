@@ -38,8 +38,6 @@ body {
     display: flex;
     justify-content: center;
 }
-/* kas cia domai? https://prnt.sc/fRto0gjdcNZe */
-/* apie ka tu sneki??? */
 .card {
     display: flex;
     justify-content: center;
@@ -51,6 +49,7 @@ body {
     padding: 1.89rem;
     border-radius: 15px;
 }
+/* kazkas nxj su animation yra as nzn, kai hoverini mazas shiftas matosi */
 .card-btn{
     opacity: 0;
     width: 60%;
@@ -62,7 +61,7 @@ body {
     font-family: "Montserrat", sans-serif;
     transition: 0.25s ease-in-out;
 }
-
+/* as nesuprantu kas blet su button color vyksta kai baigi hoverint */
 .card:hover .card-btn {
     transform: translate(-45%, 310%);
     font-size: 1.05em;
@@ -76,6 +75,7 @@ body {
     transition: 0.25s ease-in-out;
     transform: translate(-45%, 310%);
 }
+/* borderis yra pidaras */
 .card-btn:hover{
     border: lightpink 1px solid;
     transition: 0.25s ease-in-out;
@@ -84,6 +84,7 @@ body {
     font-size: 30px;
     font-weight: bold;
 }
+/* imano padaryt koki delay kad animation playintu? */
 #expandingdiv {
     display: flex;
     justify-content: center;
@@ -95,7 +96,7 @@ body {
     padding: 1.89rem;
     border-radius: 15px;
 }
-/* worst solution down here*/
+/* worst solution down here. vysai neblogas tiesa sakant */
 .closebtn {
     float: right;
     transform: translate(12px, -62px);
