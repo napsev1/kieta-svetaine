@@ -13,19 +13,21 @@
     <div class="navbar">
         <p><a href="index.html" class="nav-link">DRAUGU KNYGA</a></p>
     </div>
+
     <div id="myDIV" class="header">
         <input type="text" id="myInput" placeholder="WENT TO GYM">
         <span onclick="newElement()" class="addBtn">Add</span>
-      </div>
+    </div>
+
     <div class="card-center">
         <div class="card">
             <div class="card-details">
                 <p class="card-title">DIARY</p>
                 <p class="card-text">As myliu 1337</p>
-                
+                <button class="card-btn" name="answer" onclick="showDiv()">MORE...</button>
             </div>
-            <button class="card-btn" name="answer" onclick="showDiv()">MORE...</button>
         </div>
+
         <div id="expandingdiv" style="display:none;" class="answer_list" >
             <p>Hello</p>
             <button class="closebtn" onclick="closeDiv()">X</button>
