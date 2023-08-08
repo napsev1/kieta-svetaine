@@ -42,6 +42,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 .card-details{
     background: #6d65d7;
@@ -112,6 +113,7 @@ body {
 /* paziurek html code jei nesupranti kas cia vyksta*/
 #bendraujam {
     background-image: linear-gradient(to right, #6d65d7, #7b1c68);
+    background-clip: var(--text);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 900;
