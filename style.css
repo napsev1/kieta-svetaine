@@ -4,10 +4,13 @@
     --primary: #6d65d7;
     --secondary: #8787a8;
     --accent: #7b1c68;
+    --transparent: rgba(255, 255, 255, 0);
 }
-body {
-    font-family: 'Montserrat', sans-serif;
+body{
     background: linear-gradient(to right, #2c3e50, #bdc3c7);
+}
+* {
+    font-family: 'Montserrat', sans-serif;
 }
 .navbar{
     display: flex;
@@ -20,6 +23,31 @@ body {
 .navbar p{
     text-align: left;
     margin-left: 1vh;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #6d65d7;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    gap: 10px;
+    height: 50px;
+    font-size: 20px;
+}
+.addBtn{
+    cursor: pointer;
+    background-image: linear-gradient(black, black);
+    background-size: 0% 0.1em;
+    background-position-x: 0%, 100%;
+    background-position-y: 100%;
+    background-repeat: no-repeat;
+    transition: 0.25s;
+}
+.addBtn:hover{
+    font-size: 24px;
+    background-size: 100% 0.1em;
+    transition: 0.25s;
 }
 .nav-link{
     text-decoration: none;
@@ -48,6 +76,7 @@ body {
     background: #6d65d7;
     height: 50vh;
     width: 50vh;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     transition: 0.25s;
 }
@@ -76,14 +105,14 @@ body {
 }
 .card-btn{
     opacity: 0;
-    margin-left: 35%;
+    margin-left: 32%;
     margin-top: 50%;
     font-size: 42px;
     color: black;
     border-radius: 5px;
     transition-duration: 0.25s;
     padding: 11px 20px;
-    background-color: rgb(123, 87, 255);
+    background-color: rgba(123, 87, 255, 0.2);
     border: none;
     color: rgb(241, 241, 241);
     cursor: pointer;
@@ -91,7 +120,7 @@ body {
     z-index: 2;
 }
 .card-btn:hover{
-    background-color: rgba(123, 87, 255, 0.2);
+    background-color: rgb(123, 87, 255);
 }
 #expandingdiv {
     background-color: #8787a8;
@@ -100,7 +129,26 @@ body {
     background: linear-gradient(to right,#8787a8,#c2d5f0);
     overflow: hidden;
     border-radius: 12px;
-    
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
+}
+.closebtn{
+    float: right;
+    background-color: var(--transparent);
+    border: var(--transparent);
+    cursor: pointer;
+    margin-right: 5px;
+    margin-top: -5vh;
+}
+.resetbtn{
+    float: right;
+    margin-right: 3vh;
+    margin-top: -5vh;
+    font-size: 10px;
+}
+.expand-text{
+    text-align: center;
+    font-size: larger;
+    font-weight: 600;
 }
 .citata {
     align-content: center;
