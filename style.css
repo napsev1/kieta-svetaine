@@ -1,13 +1,14 @@
 :root {
     --text: #040910;
-    --background: #b1b9cd;
+    --background: #faf8ec;
     --primary: #6d65d7;
     --secondary: #8787a8;
     --accent: #7b1c68;
     --transparent: rgba(255, 255, 255, 0);
 }
 body{
-    background: linear-gradient(to right, #2c3e50, #bdc3c7);
+    /* background: linear-gradient(to right, #38ADAE, #CD295A); */
+    background-color: var(--background);
 }
 * {
     font-family: 'Montserrat', sans-serif;
@@ -27,27 +28,12 @@ body{
 .header{
     display: flex;
     align-items: center;
-    justify-content: center;
-    background: #6d65d7;
-    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
+    width: fit-content;
+    transform: translateX(76vh);
     border-radius: 5px;
     gap: 10px;
     height: 50px;
     font-size: 20px;
-}
-.addBtn{
-    cursor: pointer;
-    background-image: linear-gradient(black, black);
-    background-size: 0% 0.1em;
-    background-position-x: 0%, 100%;
-    background-position-y: 100%;
-    background-repeat: no-repeat;
-    transition: 0.25s;
-}
-.addBtn:hover{
-    font-size: 24px;
-    background-size: 100% 0.1em;
-    transition: 0.25s;
 }
 .nav-link{
     text-decoration: none;
@@ -66,6 +52,20 @@ body{
     background-size: 100% 0.1em;
     font-size: 24px;
 }
+.addBtn{
+    cursor: pointer;
+    background-image: linear-gradient(black, black);
+    background-size: 0% 0.1em;
+    background-position-x: 0%, 100%;
+    background-position-y: 100%;
+    background-repeat: no-repeat;
+    transition: 0.25s;
+}
+.addBtn:hover{
+    font-size: 24px;
+    background-size: 100% 0.1em;
+    transition: 0.25s;
+}
 .card-center{
     display: flex;
     justify-content: center;
@@ -73,7 +73,7 @@ body{
     gap: 10px;
 }
 .card-details{
-    background: #6d65d7;
+    background: #C6CCC7;
     height: 50vh;
     width: 50vh;
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
@@ -112,7 +112,7 @@ body{
     border-radius: 5px;
     transition-duration: 0.25s;
     padding: 11px 20px;
-    background-color: rgba(123, 87, 255, 0.2);
+    background-color: #C5B6A9;
     border: none;
     color: rgb(241, 241, 241);
     cursor: pointer;
@@ -120,13 +120,12 @@ body{
     z-index: 2;
 }
 .card-btn:hover{
-    background-color: rgb(123, 87, 255);
+    background-color: #e4dbd4;
 }
 #expandingdiv {
-    background-color: #8787a8;
+    background-color: #C6CCC7;
     width: 300px;
     height: 200px;
-    background: linear-gradient(to right,#8787a8,#c2d5f0);
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
@@ -157,19 +156,22 @@ body{
     top: 40%;
     font-size: 30px;
     font-weight: 600;
+    border-radius: 10px;
 }
 /* paziurek html code jei nesupranti kas cia vyksta*/
 #bendraujam {
-    background-image: linear-gradient(to right, #6d65d7, #7b1c68);
+    background-image: linear-gradient(to right, #839939, #828534);
     background-clip: var(--text);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 900;
 }
 #myInput{
-    display: flex;
-    flex-direction: column;
+    padding: 10px 15px;
     width: fit-content;
     position: static;
     max-width: 240px;
+    border: none;
+    border-bottom: 2px solid #040910;
+    background-color: rgba(255, 255, 255, 0.2);
 }
