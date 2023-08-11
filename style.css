@@ -110,7 +110,6 @@ body{
     align-items: center;
     position: relative;
     gap: 10px;
-    transform: translateX(8%);
     transition: 0.25s ease-in-out;
 }
 .card-center.isOpen{
@@ -183,8 +182,8 @@ body{
 }
 #expandingdiv {
     background-color: #C6CCC7;
-    width: 300px;
-    height: 200px;
+    width: 0px;
+    height: 0px;
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
@@ -193,6 +192,8 @@ body{
     transition: 0.25s ease-out;
 }
 #expandingdiv.isOpen{
+    width: 300px;
+    height: 200px;
     transition: 0.25s ease-out;
     transform: translateX(0);
     opacity: 1;
