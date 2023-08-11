@@ -26,5 +26,7 @@ function resetElement() {
       document.getElementById("myUL").innerHTML = "";
 }
 
-
- 
+const checkbox = document.getElementById("darkmodecb")
+checkbox.addEventListener("change", () => {
+  document.body.classList.toggle("dark")
+})
