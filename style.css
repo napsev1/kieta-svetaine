@@ -70,7 +70,14 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     gap: 10px;
+    transform: translateX(8%);
+    transition: 0.25s ease-in-out;
+}
+.card-center.isOpen{
+    transition: 0.25s ease-in-out;
+    transform: translateX(-2%);
 }
 .card-details{
     background: #C6CCC7;
@@ -122,14 +129,6 @@ body{
 .card-btn:hover{
     background-color: #e4dbd4;
 }
-#expandingdiv {
-    background-color: #C6CCC7;
-    width: 300px;
-    height: 200px;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
-}
 .closebtn{
     float: right;
     background-color: var(--transparent);
@@ -143,6 +142,22 @@ body{
     margin-right: 3vh;
     margin-top: -5vh;
     font-size: 10px;
+}
+#expandingdiv {
+    background-color: #C6CCC7;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translateX(-150%);
+    transition: 0.25s ease-out;
+}
+#expandingdiv.isOpen{
+    transition: 0.25s ease-out;
+    transform: translateX(0);
+    opacity: 1;
 }
 .expand-text{
     text-align: center;

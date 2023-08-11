@@ -1,12 +1,11 @@
-//atidaro div kai pamygi migtuka
-function showDiv() {
-   document.getElementById('expandingdiv').style.display = "block";
-}
- // as esu genijus no cap
- function closeDiv(){
-   document.getElementById("expandingdiv").style.display = "none";
-} 
+const expanddiv = document.getElementById("expandingdiv");
+const cardcenter = document.getElementsByClassName("card-center");
 
+//atidaro ir uzdaro expand div su animacija kai pamygi migtuka
+function showDiv() {
+   expanddiv.classList.toggle("isOpen")
+   cardcenter[0].classList.toggle("isOpen")
+}
 // darau tai ant prikolo ismokt labiau js
 // ir kad tu suprastum si js coda ir pasymokitum is jo
 // newElement funkcija (ja callina html code)
