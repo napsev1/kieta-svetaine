@@ -3,8 +3,9 @@
     --background: #faf8ec;
     --primary: #6d65d7;
     --secondary: #8787a8;
-    --accent: #7b1c68;
+    --accent: #839939;
     --transparent: rgba(255, 255, 255, 0);
+    --background-color: #C6CCC7;
 }
 body{
     /* background: linear-gradient(to right, #38ADAE, #CD295A); */
@@ -14,7 +15,10 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 .dark {
-    background-color: #040910;
+    background-color: #3B3B3B;
+    --background-color: #232225;
+    --text:#ffffff;
+    --accent:#7b1c68
 }
 /* sunku optimizint perspeju switcha*/
 .switch-darkmode {
@@ -91,6 +95,7 @@ body{
     font-size: 24px;
 }
 .addBtn{
+    color: var(--text);
     cursor: pointer;
     background-image: linear-gradient(black, black);
     background-size: 0% 0.1em;
@@ -105,6 +110,7 @@ body{
     transition: 0.25s;
 }
 .card-center{
+    color: var(--text);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,7 +123,7 @@ body{
     transform: translateX(-2%);
 }
 .card-details{
-    background: #C6CCC7;
+    background: var(--background-color);
     height: 50vh;
     width: 50vh;
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
@@ -181,7 +187,8 @@ body{
     font-size: 10px;
 }
 #expandingdiv {
-    background-color: #C6CCC7;
+    color: var(--text);
+    background-color: var(--background-color);
     width: 0px;
     height: 0px;
     overflow: hidden;
@@ -214,13 +221,14 @@ body{
 }
 /* paziurek html code jei nesupranti kas cia vyksta*/
 #bendraujam {
-    background-image: linear-gradient(to right, #839939, #828534);
+    background-image: linear-gradient(to right, var(--accent), #828534);
     background-clip: var(--text);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 900;
 }
 #myInput{
+    color: var(--text);
     padding: 10px 15px;
     width: fit-content;
     position: static;
