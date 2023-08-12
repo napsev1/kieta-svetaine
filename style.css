@@ -68,6 +68,7 @@ body{
     margin-left: 1vh;
 }
 .header{
+    color: var(--text);
     display: flex;
     align-items: center;
     width: fit-content;
@@ -211,6 +212,7 @@ body{
     font-weight: 600;
 }
 .citata {
+    color: var(--text);
     align-content: center;
     position: absolute;
     padding: 12px 15px;
@@ -235,5 +237,5 @@ body{
     max-width: 240px;
     border: none;
     border-bottom: 2px solid #040910;
-    background-color: rgba(255, 255, 255, 0.2);
+    background: none;
 }
