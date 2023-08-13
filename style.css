@@ -36,8 +36,8 @@ body{
 .switch-darkmode {
     position: relative;
     display: inline-block;
-    width: 7.6vh;
-    height: 4.2vh;
+    width: 6.2vh;
+    height: 3.5vh;
     }
   .switch-darkmode .slider {
     background-color: #040910;
