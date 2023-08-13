@@ -36,8 +36,8 @@ body{
 .switch-darkmode {
     position: relative;
     display: inline-block;
-    width: 6.2vh;
-    height: 3.5vh;
+    width: 7.6vh;
+    height: 4.2vh;
     }
   .switch-darkmode .slider {
     background-color: #040910;
@@ -240,4 +240,28 @@ body{
     border: none;
     border-bottom: 2px solid #040910;
     background: none;
+}
+.txtinput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+.txtinput input{
+    color: var(--text);
+    padding: 10px 15px;
+    position: static;
+    width: 240px;
+    border: none;
+    border-bottom: 2px solid #040910;
+    background: none;
+    text-align: center;
+
+}
+#feed {
+    display: flex;
+    color: var(--text);
+    padding: 10px 15px;
+    position: static;
+    border: solid;
 }
