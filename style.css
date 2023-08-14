@@ -1,10 +1,26 @@
 :root {
-    --background-light:white;
+    --text: #040910;
+    --background: #faf8ec;
+    --primary: #6d65d7;
+    --secondary: #8787a8;
+    --accent: #839939;
+    --transparent: rgba(255, 255, 255, 0);
+    --background-color: #C6CCC7;
 }
-body {
+body{
+    /* background: linear-gradient(to right, #38ADAE, #CD295A); */
+    background-color: var(--background);
+}
+* {
     font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(to right, #2c3e50, #bdc3c7);
 }
+.dark {
+    background-color: #3B3B3B;
+    --background-color: #232225;
+    --text:#ffffff;
+    --accent:#7b1c68
+}
+/* sunku optimizint perspeju switcha*/
 .navbar{
     display: flex;
     width: 100%;
@@ -16,6 +32,53 @@ body {
 .navbar p{
     text-align: left;
     margin-left: 1vh;
+}
+.switch-darkmode {
+    position: relative;
+    display: inline-block;
+    width: 6.2vh;
+    height: 3.5vh;
+    }
+  .switch-darkmode .slider {
+    background-color: #040910;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.25s;
+    border-radius: 25px;
+    }
+  .switch-darkmode .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 17%;
+    box-shadow: inset 15px -4px 0px 15px #ffffff;
+    transition: transform 0.5s, box-shadow 0.5s;
+    }
+  .switch-darkmode input:checked + .slider:before {
+    transform: translateX(110%);
+    box-shadow: inset 15px -4px 0px 15px #ff01e1;
+    }
+    #darkmodecb{
+        display: none;
+    }   
+    
+.header{
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    transform: translateX(76vh);
+    border-radius: 5px;
+    gap: 10px;
+    height: 50px;
+    font-size: 20px;
 }
 .nav-link{
     text-decoration: none;
@@ -34,111 +97,171 @@ body {
     background-size: 100% 0.1em;
     font-size: 24px;
 }
+.addBtn{
+    color: var(--text);
+    cursor: pointer;
+    background-image: linear-gradient(black, black);
+    background-size: 0% 0.1em;
+    background-position-x: 0%, 100%;
+    background-position-y: 100%;
+    background-repeat: no-repeat;
+    transition: 0.25s;
+}
+.addBtn:hover{
+    font-size: 24px;
+    background-size: 100% 0.1em;
+    transition: 0.25s;
+}
 .card-center{
+    color: var(--text);
     display: flex;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+    transition: 0.25s ease-in-out;
 }
-
-/* kas cia domai? https://prnt.sc/fRto0gjdcNZe */
-/* apie ka tu sneki??? */
-/* baisiai kreivas more butonas*/
-
-.card {
-    display: flex;
-    justify-content: center;
-    width: 10%;
-    height: 200px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    color: white;
-    background: solid var(--background-light);
-    padding: 1.89rem;
+.card-center.isOpen{
+    transition: 0.25s ease-in-out;
+    transform: translateX(-2%);
+}
+.card-details{
+    background: var(--background-color);
+    height: 50vh;
+    width: 50vh;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
+    transition: 0.25s;
 }
-/* kazkas nxj su animation yra as nzn, kai hoverini mazas shiftas matosi */
+.card-details .card-btn{
+    opacity: 0;
+    transition: 0.25s;
+}
+.card-details:hover{
+    background: whitesmoke;
+    height: 55vh;
+    width: 55vh;
+    border-radius: 15px;
+    transition: 0.25s;
+}
+.card-details:hover .card-btn{
+    transition: 0.25s;
+    opacity: 1;
+}
+.card-title{
+    font-size: 56px;
+    text-align: center;
+}
+.card-text{
+    font-size: 30px;
+    margin-left: 20px;
+}
 .card-btn{
     opacity: 0;
-    width: 60%;
-    height: 30%;
-    font-size: 15px;
-    border-radius: 15px;
-    color: white;
-    border-color: rgba(0, 0, 0, 0);
-    font-family: "Montserrat", sans-serif;
-    transition: 0.25s ease-in-out;
-}
-/* as nesuprantu kas blet su button color vyksta kai baigi hoverint */
-.card:hover .card-btn {
-    transform: translate(-45%, 310%);
-    font-size: 1.05em;
-    opacity: 1;
-    background-color: rgba(72, 69, 75, 0.2);
-    scale: 1.0;
-    transition: 0.25s ease-in-out;
-    /* transition: 0.6s cubic-bezier(0.23, 1, 0.320, 1); */
-}
-.card:hover .card-btn:active {
-    transition: 0.25s ease-in-out;
-    transform: translate(-45%, 310%);
-}
-/* borderis yra pidaras */
-.card-btn:hover{
-    border: lightpink 1px solid;
-    transition: 0.25s ease-in-out;
-}
-.card-title {
-    font-size: 30px;
+    margin-left: 32%;
+    margin-top: 50%;
+    font-size: 42px;
+    color: black;
+    border-radius: 5px;
+    transition-duration: 0.25s;
+    padding: 11px 20px;
+    background-color: #C5B6A9;
+    border: none;
+    color: rgb(241, 241, 241);
+    cursor: pointer;
     font-weight: bold;
+    z-index: 2;
 }
-/* imano padaryt koki delay kad animation playintu? */
-/* uzpiso sitas css ebanas varau kitus shit daryt*/
+.card-btn:hover{
+    background-color: #e4dbd4;
+}
+.closebtn{
+    float: right;
+    background-color: var(--transparent);
+    border: var(--transparent);
+    cursor: pointer;
+    margin-right: 5px;
+    margin-top: -5vh;
+}
+.resetbtn{
+    float: right;
+    margin-right: 3vh;
+    margin-top: -5vh;
+    font-size: 10px;
+}
 #expandingdiv {
+    color: var(--text);
+    background-color: var(--background-color);
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transform: translateX(-150%);
+    transition: 0.25s ease-out;
+}
+#expandingdiv.isOpen{
+    width: 300px;
+    height: 200px;
+    transition: 0.25s ease-out;
+    transform: translateX(0);
+    opacity: 1;
+}
+.expand-text{
+    text-align: center;
+    font-size: larger;
+    font-weight: 600;
+}
+.citata {
+    color: var(--text);
+    align-content: center;
+    position: absolute;
+    padding: 12px 15px;
+    top: 40%;
+    font-size: 30px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+/* paziurek html code jei nesupranti kas cia vyksta*/
+#bendraujam {
+    background-image: linear-gradient(to right, var(--accent), #828534);
+    background-clip: var(--text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+#myInput{
+    color: var(--text);
+    padding: 10px 15px;
+    width: fit-content;
+    position: static;
+    max-width: 240px;
+    border: none;
+    border-bottom: 2px solid #040910;
+    background: none;
+}
+.txtinput {
     display: flex;
     justify-content: center;
-    width: 10%;
-    height: 200px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    color: white;
-    background: solid var(--background-light);
-    padding: 1.89rem;
-    border-radius: 15px;
+    align-items: center;
+    height: 100px;
 }
-/* worst solution down here. vysai neblogas tiesa sakant gal */
-.closebtn {
-    float: right;
-    transform: translate(12px, -62px);
-    background: solid var(--background-light);
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px;
-    border-radius: 5px;
-    border: 0;
-}
-.addBtn {
-    transition: all 0.3s ease-in-out;
-    font-family: "Dosis", sans-serif;
-    border-radius: 10px;
-    background-color: rgb(80, 78, 106);
-    box-shadow: 0 10px 10px -6px rgba(255, 255, 255, 0.5);
+.txtinput input{
+    color: var(--text);
+    padding: 10px 15px;
+    position: static;
+    width: 240px;
     border: none;
-    font-size: 20px;
-    color: white;
-}
-.addBtn:active {
-    opacity: 0.5;
-}
-.addBtn:hover {
-    transform: translateY(3px);
-    box-shadow: none;
+    border-bottom: 2px solid #040910;
+    background: none;
+    text-align: center;
 
-
-   }
-#myInput {
- color: #fff;
- font-size: 0.9rem;
- background-color: transparent;
- width: 10%;
- box-sizing: border-box;
- padding-inline: 15px;
- padding-block: 12px;
- border: none;
- border-bottom: solid;
+}
+#feed {
+    display: flex;
+    color: var(--text);
+    padding: 10px 15px;
+    position: static;
+    border: solid;
 }
